@@ -1,0 +1,28 @@
+Jobs :
+  - Name : "job1"
+    Exec : "echo"
+    Args : ["you", "gotta","be","kidding"]
+  - Name : "job2"
+    Exec : "tr"
+    Args : [" ","_"]
+  - Name : "b"
+    Exec : "yes"
+    Args : ["No","I’m", "not!"]
+  - Name : "a"
+    Exec : "head"
+    Args : []
+  - Name : "job5"
+    Exec : "echo"
+    Args : ["No","I’m", "not!"]
+  - Name : "job6"
+    Exec : "tr"
+    Args : [" ", "*"]
+Pipes :
+  - Name : "pipe1"
+    Pipe : [ "job1","job2" ]
+    input : "stdin"
+    output : "out.txt"
+  - Name : "pipe2"
+    Pipe : [ "job5","job6" ]
+    input : "stdin"
+    output : "out2.txt"
